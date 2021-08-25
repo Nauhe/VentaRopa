@@ -1,16 +1,16 @@
-<div >
-  <div class="col3 centrado">
-    <header>
-      <h1> Venta de Ropa</h1>
-    </header>
-    <div class="col3 izq">
+<div style="text-align: center;">
+<h1>Le Facha</h1>
+  </div>
+  <div class=" izq">
     <button>Login</button>
     </div>
+  <div class="container-fluid"><app-menu></app-menu>
   </div>
-  <div><app-menu></app-menu></div>
-  <div><app-ropa [titulo]="tituloMujer" [productos]= "productoMujer">ROPA MUJER </app-ropa></div>
-  <div><app-ropa [titulo]="'Hombre'" [productos]="productoHombre">ROPA HOMBRE </app-ropa></div>
-  <div><app-ropa [titulo]="'Niño'">ROPA NIÑO </app-ropa></div>
+  <div class="row">
+    <div class="col-12"><app-ropa [titulo]="tituloMujer" [productos]= "productoMujer">ROPA MUJER </app-ropa></div>
+    <div class="col-12"><app-ropa [titulo]="'Hombre'" [productos]="productoHombre">ROPA HOMBRE </app-ropa></div>
+    <div class="col-12"><app-ropa [titulo]="'Niño'" [productos]="productoHombre">ROPA NIÑO </app-ropa></div>
+
+  </div>
   <div>QUIENES SOMOS</div>
 
-</div>

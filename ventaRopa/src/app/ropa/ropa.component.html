@@ -1,6 +1,34 @@
-<h1>{{titulo}}</h1>
-<div *ngFor="let p of productos">
-    <span>{{p.descripcion}}</span>
-    <span>{{p.precio}}</span>
-
+<div class="col-12" style="text-align: center;">
+    <h1>{{titulo}}</h1>
 </div>
+<hr>
+<div class="row">
+    <div class="col-4" *ngFor="let p of productos">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{p.descripcion}}</h5>
+              <span>Precio: $ {{p.precio}}</span>
+              <div>
+                  Talle:
+                  <select name="" id="">
+                      <option value="">S</option>
+                      <option value="">M</option>
+                      <option value="">L</option>
+                      <option value="">XL</option>
+                  </select>
+              </div>
+              <div>
+                  Colores Disponibles:
+                  <select name="" id="">
+                    <option value="">Blanco</option>
+                    <option value="">Negro</option>
+                    <option value="">Gris</option>
+                  </select>
+              </div>
+              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            </div>
+          </div>
+    </div>
+</div>
+
