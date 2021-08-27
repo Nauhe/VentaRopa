@@ -1,0 +1,24 @@
+.miClase{
+    height: 200px;
+    width: 200px;
+}
+.cajaColores{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    border: solid 2px black;
+    &:hover{
+        border: solid 4px cadetblue;
+    }
+}
+.colorNegro{
+    background-color: black;
+}
+
+.colorBlanco{
+    background-color: white;
+}
+.Colores{
+    display: flex;
+    flex-direction: row;
+}
