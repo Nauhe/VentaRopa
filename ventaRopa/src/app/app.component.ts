@@ -13,7 +13,8 @@ export class AppComponent {
   productoMujer: any[] = [
     {
     descripcion: 'Remera',
-    precio: 2000
+    precio: 2000,
+    foto: 'assets/remera_mujerNegra.jpg'
   },
   {
     descripcion: 'Buzo',
