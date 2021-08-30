@@ -16,4 +16,6 @@ export class RopaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
