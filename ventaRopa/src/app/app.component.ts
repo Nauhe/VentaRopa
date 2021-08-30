@@ -14,7 +14,7 @@ export class AppComponent {
     {
     descripcion: 'Remera',
     precio: 2000,
-    foto: 'assets/remera_mujerNegra.jpg'
+    foto: 'assets/remera_mujerNegra.jpg'  
   },
   {
     descripcion: 'Buzo',
