@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductosService } from '../productos.service';
 
 @Component({
   selector: 'app-ropa',
@@ -11,13 +12,15 @@ export class RopaComponent implements OnInit {
   @Input() titulo: string= "";
   @Input() productos: any[];
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private servicioProducto: ProductosService) { }
   
 
   ngOnInit(): void {
   }
 
-  irDetalle(){
+  irDetalle(prod){
+    console.log(prod);
+    this.servicioProducto.productoSeleccionado = prod;
     this.router.navigate(['detalle']);
   }
 

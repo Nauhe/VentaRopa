@@ -1,19 +1,36 @@
- <div class="container-fluid">
-    <div class="row">
-        <div class="col-9">
-            <div class="card">
-                <div class="card-header">
-                  <h1>producto.descripcion</h1>
-                </div>
-                <div class="card-body">
-                  <img class="card-img-top miClase" src="{{producto.foto}}" alt="Card image cap">
-                  <h5 class="card-title">descripcion: </h5>
-                  <p class="card-text">Precio: $ producto.precio</p>
-                </div>
-              </div>
-        </div>
-        <div class="col-3">
-            <button>Comprar</button>
-        </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12" class= "div"> 
+      <h1>{{producto.descripcion}}</h1>
     </div>
-</div> 
+    <div class="col-6">
+      <img class="img-rounded" src="{{producto.foto}}" alt="Card image cap">
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6">
+          Talle:
+          <select name="" id="" style="cursor: pointer;">
+            <option value="">S</option>
+            <option value="">M</option>
+            <option value="">L</option>
+            <option value="">XL</option>
+          </select>
+        </div>
+        <div class="col-6">
+          Precio $ {{producto.precio}}
+        </div>
+        <div class="col-6">
+          Colores Disponibles:
+            <div style="cursor: pointer;" class="Colores">
+                <div class="cajaColores colorNegro" (click)="ponerColor('negro', producto)"></div>
+                <div class="cajaColores colorBlanco" (click)="ponerColor('blanco', producto)"></div>
+            </div>
+        </div>
+        <div class="col-12">
+          <button>COMPRAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
