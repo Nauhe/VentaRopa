@@ -16,11 +16,11 @@ export class DetalleComponent implements OnInit {
     this.producto = this.servicioProducto.productoSeleccionado;
   }
 
-  ponerColor(color, producto){
-    if(color =="blanco"){
-      producto.foto= "assets/Remera_mujerBlanca.jpg"
-    }else{
-      producto.foto="assets/remera_mujerNegra.jpg"
-    }
+ 
+  ponerColor(p: any, color: string){
+    p.foto = this.servicioProducto.cambiarColor(p.foto,color );
+   
   }
+
+
 }

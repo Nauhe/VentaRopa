@@ -14,17 +14,18 @@ export class ContenidoComponent implements OnInit {
     {
     descripcion: 'Remera',
     precio: 2000,
-    foto: 'assets/remera_mujerNegra.jpg'  
+    foto: 'assets/remMujer_negro.jpg' ,
+    detalle: "confeccionada con hilo de algodón, lo que la hace una prenda fresca, ligera y muy cómoda de llevar."
   },
   {
     descripcion: 'Buzo',
     precio: 8000,
-    foto:'assets/buzo_mujerNegro.jpg'
+    foto:'assets/buzoMujer_negro.jpg'
   },
   {
     descripcion: 'Pantalon',
     precio: 5000,
-    foto: 'assets/pant_mujerNegro.jpg'
+    foto: 'assets/pantMujer_negro.jpg'
   },
   ]
 
@@ -32,17 +33,18 @@ export class ContenidoComponent implements OnInit {
     {
     descripcion: 'Remera',
     precio: 2000,
-    foto: 'assets/remera_hombreNegra.jpg'
+    foto: 'assets/remHombre_negro.jpg',
+    detalle:"confeccionada con hilo de algodón, lo que la hace una prenda fresca, ligera y muy cómoda de llevar."
   },
   {
     descripcion: 'Campera',
     precio: 9000,
-    foto: 'assets/camp_hombreNegra.jpg'
+    foto: 'assets/campHombre_negro.jpg'
   },
   {
     descripcion: 'Pantalon',
     precio: 8000,
-    foto: 'assets/pantalon_hombreNegro.jpg'
+    foto: 'assets/pantHombre_negro.jpg'
   },
   ]
 
@@ -50,17 +52,18 @@ export class ContenidoComponent implements OnInit {
     {
     descripcion: 'Remera',
     precio: 2000,
-    foto: 'assets/remera_niñoBlanca.jpg'
+    foto: 'assets/remNinio_negro.jpg',
+    detalle: " Confeccionada con hilo de algodón, lo que la hace una prenda fresca, ligera y muy cómoda de llevar."
   },
   {
     descripcion: 'Buzo',
     precio: 8000,
-    foto: 'assets/buzo_niñoNegro.jpg'
+    foto: 'assets/buzoNinio_negro.jpg'
   },
   {
     descripcion: 'Pantalon',
     precio: 5000,
-    foto: 'assets/pant_niñoBlanco.jpg'
+    foto: 'assets/pantNinio_negro.jpg'
   }
   ]
 
