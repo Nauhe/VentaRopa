@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../carrito.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-carrito',
