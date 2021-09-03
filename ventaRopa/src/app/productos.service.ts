@@ -4,21 +4,27 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductosService {
-public productoSeleccionado;
+  private productoSeleccionado;
 
   constructor() { }
 
-cambiarColor(imagen:string, color: string):string{
-  imagen = imagen.substr (0,imagen.length - 9);
-  if(color== "n"){
-    imagen+="negro.jpg";
-  }else{
-    imagen+="blanc.jpg";
-  }  
-  return imagen;
+  cambiarColor(imagen: string, color: string): string {
+    imagen = imagen.substr(0, imagen.length - 9);
+    if (color == "n") {
+      imagen += "negro.jpg";
+    } else {
+      imagen += "blanc.jpg";
+    }
+    return imagen;
 
-}
+  }
+  setProducto(prod) {
+    this.productoSeleccionado = prod;
+  }
 
+  getProducto() {
+    return this.productoSeleccionado;
+  }
 
 }
 

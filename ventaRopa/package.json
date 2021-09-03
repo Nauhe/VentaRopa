@@ -20,6 +20,7 @@
     "@angular/router": "~12.1.1",
     "bootstrap": "^5.1.0",
     "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
     "popper.js": "^1.16.1",
     "primeicons": "^4.1.0",
     "primeng": "^12.1.0-rc.2",

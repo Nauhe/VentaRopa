@@ -13,7 +13,7 @@ export class DetalleComponent implements OnInit {
   constructor(private router:Router , private servicioProducto: ProductosService) { }
 
   ngOnInit(): void {
-    this.producto = this.servicioProducto.productoSeleccionado;
+    this.producto = this.servicioProducto.getProducto();
   }
 
  
