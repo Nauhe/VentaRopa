@@ -19,7 +19,6 @@ export class RopaComponent implements OnInit {
   }
 
   irDetalle(prod){
-    console.log(prod);
     this.servicioProducto.productoSeleccionado = prod;
     this.router.navigate(['detalle']);
   }

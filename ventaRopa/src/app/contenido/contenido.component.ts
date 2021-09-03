@@ -15,12 +15,13 @@ export class ContenidoComponent implements OnInit {
     descripcion: 'Remera',
     precio: 2000,
     foto: 'assets/remMujer_negro.jpg' ,
-    detalle: "confeccionada con hilo de algodón, lo que la hace una prenda fresca, ligera y muy cómoda de llevar."
+    detalle: " CONFECCIONADA CON HILO DE ALGODÓN, LO QUE LA HACE UNA PRENDA FRESCA, LIGERA Y MUY CÓMODA DE LLEVAR"
   },
   {
     descripcion: 'Buzo',
     precio: 8000,
-    foto:'assets/buzoMujer_negro.jpg'
+    foto:'assets/buzoMujer_negro.jpg',
+    detalle: " BUZO CON CAPUCHA LISO, IDEAL PARA MEDIA ESTACIÓN.EN TELA FRISA"
   },
   {
     descripcion: 'Pantalon',
@@ -34,7 +35,7 @@ export class ContenidoComponent implements OnInit {
     descripcion: 'Remera',
     precio: 2000,
     foto: 'assets/remHombre_negro.jpg',
-    detalle:"confeccionada con hilo de algodón, lo que la hace una prenda fresca, ligera y muy cómoda de llevar."
+    detalle: " CONFECCIONADA CON HILO DE ALGODÓN, LO QUE LA HACE UNA PRENDA FRESCA, LIGERA Y MUY CÓMODA DE LLEVAR"
   },
   {
     descripcion: 'Campera',
@@ -53,12 +54,13 @@ export class ContenidoComponent implements OnInit {
     descripcion: 'Remera',
     precio: 2000,
     foto: 'assets/remNinio_negro.jpg',
-    detalle: " Confeccionada con hilo de algodón, lo que la hace una prenda fresca, ligera y muy cómoda de llevar."
+    detalle: " CONFECCIONADA CON HILO DE ALGODÓN, LO QUE LA HACE UNA PRENDA FRESCA, LIGERA Y MUY CÓMODA DE LLEVAR"
   },
   {
     descripcion: 'Buzo',
     precio: 8000,
-    foto: 'assets/buzoNinio_negro.jpg'
+    foto: 'assets/buzoNinio_negro.jpg',
+    detalle: "BUZO CON CAPUCHA.ESTAMPADO EN FRENTE. EN TELA FRISA CON ELASTANO"
   },
   {
     descripcion: 'Pantalon',
