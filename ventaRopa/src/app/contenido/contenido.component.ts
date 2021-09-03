@@ -15,8 +15,11 @@ export class ContenidoComponent implements OnInit {
     descripcion: 'Remera',
     precio: 2000,
     foto: 'assets/remMujer_negro.jpg' ,
-    detalle: " CONFECCIONADA CON HILO DE ALGODÓN, LO QUE LA HACE UNA PRENDA FRESCA, LIGERA Y MUY CÓMODA DE LLEVAR"
-  },
+    detalle: " CONFECCIONADA CON HILO DE ALGODÓN, LO QUE LA HACE UNA PRENDA FRESCA, LIGERA Y MUY CÓMODA DE LLEVAR",
+    id: 1, 
+    cant: 0,
+    talle: 1 , 
+  }, 
   {
     descripcion: 'Buzo',
     precio: 8000,

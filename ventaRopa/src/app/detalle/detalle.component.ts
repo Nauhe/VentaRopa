@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarritoService } from '../carrito.service';
 import { ProductosService } from '../productos.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ProductosService } from '../productos.service';
 export class DetalleComponent implements OnInit {
   producto: any;
 
-  constructor(private router:Router , private servicioProducto: ProductosService) { }
+  constructor(private router:Router , private servicioProducto: ProductosService, private carritoService: CarritoService) { }
 
   ngOnInit(): void {
     this.producto = this.servicioProducto.getProducto();
@@ -20,6 +21,10 @@ export class DetalleComponent implements OnInit {
   ponerColor(p: any, color: string){
     p.foto = this.servicioProducto.cambiarColor(p.foto,color );
    
+  }
+
+  agregarCarrito(prod:any){
+    this.carritoService.agregarProd(prod);
   }
 
 

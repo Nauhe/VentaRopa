@@ -12,6 +12,7 @@ export class RopaComponent implements OnInit {
 
   @Input() titulo: string= "";
   @Input() productos: any[];
+  
 
   constructor(private router:Router,private servicioProducto: ProductosService,
   private carritoService:CarritoService) { }
