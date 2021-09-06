@@ -18,8 +18,7 @@ export class RopaComponent implements OnInit {
   private carritoService:CarritoService) { }
   
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
   }
 
   irDetalle(prod){
@@ -27,7 +26,6 @@ export class RopaComponent implements OnInit {
     this.router.navigate(['detalle']);
   }
 
-  
   ponerColor(producto: any,color: string){
    producto.foto = this.servicioProducto.cambiarColor(producto.foto, color);
 

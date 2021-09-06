@@ -18,6 +18,8 @@ export class CarritoComponent implements OnInit {
     this.productoCarrito = this.carritoService.dameProd();
   }
 
+
+
   //hacer funcion para contar productos.
   //hacer funcion para agregar quitar.
 
