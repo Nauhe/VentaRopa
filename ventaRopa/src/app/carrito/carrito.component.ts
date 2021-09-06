@@ -13,11 +13,13 @@ export class CarritoComponent implements OnInit {
   productoCarrito: any[]=new Array();
 
 
-  constructor(private carritoService: CarritoService, private productosService:ProductosService) { }
+  constructor(private carritoService: CarritoService, private servicioProducto: ProductosService) { }
 
   ngOnInit(): void {
     this.productoCarrito = this.carritoService.dameProd();
   }
+
+ 
   contarProd(){
 
   }
