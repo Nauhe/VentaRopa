@@ -1,18 +1,18 @@
 <div>
     <h1 style="text-align: center;">CARRITO DE COMPRAS</h1>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" *ngFor=" let a of productoCarrito">
     <div class="row">
       <div class="col-12" class= "div"> 
-        <h1></h1>
+        <h1>{{a.descripcion}}</h1>
       </div>
       <div class="col-6">
-        <img class="img-rounded" src="" alt="Card image cap">
+        <img class="img-rounded" src="{{a.foto}}" alt="Card image cap">
       </div>
       <div class="col-6">
         <div class="row">
           <div class="col-6">
-            Talle:
+            Talle:{{a.talle}}
             <select name="" id="" style="cursor: pointer;">
               <option value="">S</option>
               <option value="">M</option>
@@ -21,7 +21,7 @@
             </select>
           </div>
           <div class="col-6">
-            Precio:  $ 
+            Precio:  ${{a.precio}}
           </div>
           <div class="col-6">
             Colores Disponibles:
@@ -30,11 +30,14 @@
                   <div class="cajaColores colorBlanco" ></div>
               </div>
               <div>
-                <h5>Descripción: </h5> 
+                <h5>Descripción:{{a.detalle}} </h5> 
               </div>
           </div>
           <div class="col-12">
             <button >COMPRAR</button>
+          </div>
+          <div class="col-6">
+            <button >QUITAR</button>
           </div>
         </div>
       </div>
