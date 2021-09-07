@@ -1,32 +1,34 @@
-<div class="col-12 colorDeFondo" style="text-align: center;">
-    <h1>{{titulo}}</h1>
-</div>
-<hr>
-<div class="row colorDeFondo">
-    <div class="col-4 colorDeFondo" *ngFor="let p of productos">
-        <div class="card" style="width: 18rem;">
-            <img (click)="irDetalle(p)" class="img-rounded puntero" src="{{p.foto}}" alt="140x140">
-
-            <div class="card-body">
-                <h5 class="card-title">{{p.descripcion}}</h5>
-                <span>Precio: $ {{p.precio}}</span>
-                <div>
-                    Talle:
-                    <select name="" id="" style="cursor: pointer;">
-                        <option value="">S</option>
-                        <option value="">M</option>
-                        <option value="">L</option>
-                        <option value="">XL</option>
-                    </select>
-                </div>
-                <div class="colores">
-                    Colores Disponibles:
-                    <div style="cursor: pointer;" class="Colores">
-                        <div class=" cajaColores colorNegro" (click)="ponerColor( p, 'n')"></div>
-                        <div class=" cajaColores colorBlanco" (click)="ponerColor( p, 'blanc')"></div>
+<div class="conteiner-fluid">
+    <div class="col-12 colorDeFondo textoCentrado">
+        <h1>{{titulo}}</h1>
+    </div>
+    <hr>
+    <div class="row colorDeFondo">
+        <div class="col-4 colorDeFondo centrar-item" *ngFor="let p of productos">
+            <div class="card" style="width: 18rem;">
+                <img (click)="irDetalle(p)" class="img-rounded puntero" src="{{p.foto}}" alt="140x140">
+    
+                <div class="card-body">
+                    <h5 class="card-title">{{p.descripcion}}</h5>
+                    <span>Precio: $ {{p.precio}}</span>
+                    <div>
+                        Talle:
+                        <select name="" id="" style="cursor: pointer;">
+                            <option value="">S</option>
+                            <option value="">M</option>
+                            <option value="">L</option>
+                            <option value="">XL</option>
+                        </select>
                     </div>
+                    <div class="colores">
+                        Colores Disponibles:
+                        <div style="cursor: pointer;" class="Colores">
+                            <div class=" cajaColores colorNegro" (click)="ponerColor( p, 'n')"></div>
+                            <div class=" cajaColores colorBlanco" (click)="ponerColor( p, 'blanc')"></div>
+                        </div>
+                    </div>
+                    <button (click)="agregarCarrito(p)">Agregar al carrito</button>
                 </div>
-                <button (click)="agregarCarrito(p)">Agregar al carrito</button>
             </div>
         </div>
     </div>
