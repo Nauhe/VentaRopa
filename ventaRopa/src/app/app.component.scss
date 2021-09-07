@@ -1,20 +1,13 @@
 *{
     padding: 0px;
 }
-.centrado{
+
+.colorDeFondoyTexto{
+    background-color: rgb(234, 234, 234);
     text-align: center;
 }
-.colorDeFondo{
-    background-color: rgb(234, 234, 234)
-}
-.fondo{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,106,195,1) 10%, rgba(0,212,255,1) 100%);
-    height: 10000px;    
-}
-.colorBoton{
-background-color: rgb(208, 233, 233);
-}
-.izq{
+
+.derecha{
+    background-color: rgb(234, 234, 234);
     text-align: right;
 }
