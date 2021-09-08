@@ -12,7 +12,7 @@
       <div class="col-6">
         <div class="row">
           <div class="col-6">
-            Talle:{{a.talle}}
+            Talle:
             <select name="" id="" style="cursor: pointer;">
               <option value="">S</option>
               <option value="">M</option>
@@ -40,7 +40,10 @@
             <button >COMPRAR</button>
           </div>
           <div class="col-6">
-            <button (click)="quitarProd()" >QUITAR</button>
+            <button (click)="quitarProd(productoCarrito)" >QUITAR</button>
+          </div>
+          <div class="col-6">
+            <button (click)="vaciarCarrito(productoCarrito)" >VACIAR CARRITO</button>
           </div>
         </div>
       </div>

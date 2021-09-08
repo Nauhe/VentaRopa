@@ -26,10 +26,15 @@ export class CarritoComponent implements OnInit {
 
 
   //hacer funcion para contar productos.
+quitarProd(indice){
+  console.log(indice);
+  console.log(this.productoCarrito.splice(1))
+}
 
-  quitarProd(){
-    
+  vaciarCarrito(productoCarrito: any[]){
+    console.log(productoCarrito);
+    console.log(this.productoCarrito.splice(0));
   }
-  //hacer funcion para agregar quitar.
+  
 
 }
