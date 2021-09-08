@@ -26,9 +26,9 @@ export class CarritoComponent implements OnInit {
 
 
   //hacer funcion para contar productos.
-quitarProd(indice){
-  console.log(indice);
-  console.log(this.productoCarrito.splice(1))
+quitarProd(productoCarrito){
+  console.log(productoCarrito);
+  console.log(this.productoCarrito.splice(productoCarrito, 1))
 }
 
   vaciarCarrito(productoCarrito: any[]){
