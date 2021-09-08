@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CarritoService } from '../carrito.service';
 import { ProductosService } from '../productos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detalle',

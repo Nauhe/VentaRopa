@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../carrito.service';
 import * as _ from 'lodash';
 import { ProductosService } from '../productos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-carrito',
@@ -25,15 +26,13 @@ export class CarritoComponent implements OnInit {
   }
 
 
-  //hacer funcion para contar productos.
-quitarProd(productoCarrito){
+  quitarProd(productoCarrito){
   console.log(productoCarrito);
   console.log(this.productoCarrito.splice(productoCarrito, 1))
 }
 
-  vaciarCarrito(productoCarrito: any[]){
-    console.log(productoCarrito);
-    console.log(this.productoCarrito.splice(0));
+   vaciarCarrito(){
+   this.productoCarrito = new Array();
   }
   
 

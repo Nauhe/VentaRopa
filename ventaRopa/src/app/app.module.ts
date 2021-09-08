@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RopaComponent } from './ropa/ropa.component';
 import { ContenidoComponent } from './contenido/contenido.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CarritoComponent } from './carrito/carrito.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,10 @@
 <div>
     <h1 style="text-align: center;">CARRITO DE COMPRAS</h1>
 </div>
-<div class="container-fluid" *ngFor=" let a of productoCarrito">
+<div class="col-6">
+  <button (click)="vaciarCarrito()" >VACIAR CARRITO</button>
+</div>
+<div class="container-fluid" *ngFor=" let a of productoCarrito; let i=index">
     <div class="row">
       <div class="col-12" class= "div"> 
         <h1>{{a.descripcion}}</h1>
@@ -22,30 +25,23 @@
           </div>
           <div class="col-6">
             Precio:  ${{a.precio}}
-          </div>
-          Colores Disponibles:
-          <div style="cursor: pointer;" class="Colores">
-              <div class="cajaColores colorNegro"  ></div>
-              <div class="cajaColores colorBlanco" ></div>
-          </div>
+          </div>         
           <div class="col-6">         
               <div>
                 <h5>Descripción:{{a.detalle}} </h5> 
               </div>
           </div> 
           <div class="col-12 ">
-            Cantidad: <input type="number" value="" placeholder="1" min="1" max="50" required style="width: 50px;">
+            Cantidad: <input [(ngModel)]='a.cant' type="number" min="1" max="50" required style="width: 50px;">
           </div>
           <div class="col-12">
-            <button >COMPRAR</button>
+            <button > FINALIZAR COMPRA</button>
           </div>
           <div class="col-6">
-            <button (click)="quitarProd(productoCarrito)" >QUITAR</button>
-          </div>
-          <div class="col-6">
-            <button (click)="vaciarCarrito(productoCarrito)" >VACIAR CARRITO</button>
+            <button (click)="quitarProd(i)" >QUITAR</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
