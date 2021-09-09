@@ -12,6 +12,8 @@ import Swal from 'sweetalert2';
 export class CarritoComponent implements OnInit {
 
   productoCarrito: any[]=new Array();
+  contador:number=0;
+  
 
 
   constructor(private carritoService: CarritoService, private servicioProducto: ProductosService) { }
@@ -22,7 +24,13 @@ export class CarritoComponent implements OnInit {
 
  
   contarProd(){
-
+   let productos;
+   let contador= 0;
+   productos=this.productoCarrito;
+  this.productoCarrito.forEach(producto => {
+     contador++;     
+   });
+   return contador;
   }
 
 

@@ -1,9 +1,15 @@
 <div>
     <h1 style="text-align: center;">CARRITO DE COMPRAS</h1>
 </div>
-<div class="col-6">
-  <button (click)="vaciarCarrito()" >VACIAR CARRITO</button>
+<div class="row">
+  <div class="col-6">
+    <button (click)="vaciarCarrito()" >VACIAR CARRITO</button>
+  </div>
+  <div class="col-6 der">
+    <button > FINALIZAR COMPRA</button>
+  </div>
 </div>
+
 <div class="container-fluid" *ngFor=" let a of productoCarrito; let i=index">
     <div class="row">
       <div class="col-12" class= "div"> 
@@ -33,9 +39,6 @@
           </div> 
           <div class="col-12 ">
             Cantidad: <input [(ngModel)]='a.cant' type="number" min="1" max="50" required style="width: 50px;">
-          </div>
-          <div class="col-12">
-            <button > FINALIZAR COMPRA</button>
           </div>
           <div class="col-6">
             <button (click)="quitarProd(i)" >QUITAR</button>
