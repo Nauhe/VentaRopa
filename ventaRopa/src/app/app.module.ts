@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RopaComponent } from './ropa/ropa.component';
+import { TableModule } from 'primeng/table';
 import { ContenidoComponent } from './contenido/contenido.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { FormsModule } from '@angular/forms';
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

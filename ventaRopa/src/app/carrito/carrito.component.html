@@ -22,26 +22,31 @@
     </head>
   
 
-<table style="width: 100%;" class="colorPrincipal centrado encuadrar" *ngFor=" let a of productoCarrito" >
-    <thead class="colorSecundario centrado">
-        <tr>
-        <th > {{a.descripcion}}  </th>                  
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="letra" >
-            <td>imagen</td>
-            <td>Talle:
-              <select name="" id="" style="cursor: pointer;">
-                <option value="">S</option>
-                <option value="">M</option>
-                <option value="">L</option>
-                <option value="">XL</option>
-              </select></td>
-            <td>Precio:  $precio</td>
-            <td> Cantidad: ></td>
-            <td><button > X </button></td>
-           
-        </tr>
-    </tbody>
+<table style="width: 100%;">
+  <thead>
+    <tr>
+      <th>producto</th>
+      <th>imagen</th>
+      <th>talle</th>
+      <th>cantidad</th>
+      <th>precio</th>
+      <th>quitar</th>
+    </tr>
+  </thead>
+  <tbody *ngFor=" let a of productoCarrito; let i=index">
+    <tr>
+      <td> {{a.descripcion}}</td>
+      <td><img class="img-rounded" src="{{a.foto}}" alt="Card image cap"></td>
+      <td>Talle:
+        <select name="" id="" style="cursor: pointer;">
+          <option value="">S</option>
+          <option value="">M</option>
+          <option value="">L</option>
+          <option value="">XL</option>
+        </select></td>
+      <td>Cantidad: <input [(ngModel)]='a.cant' type="number" min="1" max="50" required style="width: 50px;"></td>
+      <td>Precio:  ${{a.precio}}</td>
+      <th><button (click)="quitarProd(i)">X</button></th>
+    </tr>
+  </tbody>
 </table>
