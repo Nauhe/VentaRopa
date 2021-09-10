@@ -9,42 +9,39 @@
     <button > FINALIZAR COMPRA</button>
   </div>
 </div>
-
-<div class="container-fluid" *ngFor=" let a of productoCarrito; let i=index">
-    <div class="row">
-      <div class="col-12" class= "div"> 
-        <h1>{{a.descripcion}}</h1>
-      </div>
-      <div class="col-6">
-        <img class="img-rounded" src="{{a.foto}}" alt="Card image cap">
-      </div>
-      <div class="col-6">
-        <div class="row">
-          <div class="col-6">
-            Talle:
-            <select name="" id="" style="cursor: pointer;">
-              <option value="">S</option>
-              <option value="">M</option>
-              <option value="">L</option>
-              <option value="">XL</option>
-            </select>
-          </div>
-          <div class="col-6">
-            Precio:  ${{a.precio}}
-          </div>         
-          <div class="col-6">         
-              <div>
-                <h5>Descripción:{{a.detalle}} </h5> 
-              </div>
-          </div> 
-          <div class="col-12 ">
-            Cantidad: <input [(ngModel)]='a.cant' type="number" min="1" max="50" required style="width: 50px;">
-          </div>
-          <div class="col-6">
-            <button (click)="quitarProd(i)" >QUITAR</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<head>
+    <style>
+    table, th, td {
+      border: 2px solid black;
+      border-collapse: unset;
+    }
+    th, td {
+      padding: 10px;
+    }
+    </style>
+    </head>
   
+
+<table style="width: 100%;" class="colorPrincipal centrado encuadrar" *ngFor=" let a of productoCarrito" >
+    <thead class="colorSecundario centrado">
+        <tr>
+        <th > {{a.descripcion}}  </th>                  
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="letra" >
+            <td>imagen</td>
+            <td>Talle:
+              <select name="" id="" style="cursor: pointer;">
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+              </select></td>
+            <td>Precio:  $precio</td>
+            <td> Cantidad: ></td>
+            <td><button > X </button></td>
+           
+        </tr>
+    </tbody>
+</table>
