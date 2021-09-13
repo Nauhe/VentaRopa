@@ -36,7 +36,7 @@
               <th>quitar</th>
           </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-productoCarrito>
+      <ng-template pTemplate="body" let-productoCarrito let-rowIndex="rowIndex">
           <tr>
               <td>{{productoCarrito.descripcion}}</td>
               <td><img class="img-rounded" src="{{productoCarrito.foto}}" alt="Card image cap"></td>
@@ -49,7 +49,7 @@
                   <option value="">L</option>
                   <option value="">XL</option>
                 </select></td>
-                <td><button (click)="quitarProd(productoCarrito)">X</button></td>
+                <td><button (click)="quitarProd(rowIndex)">X</button></td>
           </tr>
       </ng-template>
       <ng-template pTemplate="summary">

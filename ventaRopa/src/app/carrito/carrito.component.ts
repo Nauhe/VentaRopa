@@ -24,13 +24,7 @@ export class CarritoComponent implements OnInit {
 
  
   contarProd(){
-   let productos;
-   let contador= 0;
-   productos=this.productoCarrito;
-  this.productoCarrito.forEach(producto => {
-     contador++;     
-   });
-   return contador;
+ this.carritoService.agregarProd;
   }
 
 
@@ -40,8 +34,11 @@ export class CarritoComponent implements OnInit {
 }
 
    vaciarCarrito(){
-   this.productoCarrito = new Array();
+    this.carritoService.vaciarCarrito();
+    this.productoCarrito = this.carritoService.dameProd();
+
   }
+
   
 
 }
