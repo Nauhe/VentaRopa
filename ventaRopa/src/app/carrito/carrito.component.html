@@ -19,34 +19,43 @@
       padding: 10px;
     }
     </style>
-    </head>
+    </head>  
+    <p-table [value]="productoCarrito" responsiveLayout="scroll">
+      <ng-template pTemplate="caption">
+          <div class="p-d-flex p-ai-center p-jc-between">
+              Productos              
+          </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+          <tr>
+              <th>nombre</th>
+              <th>imagen</th>
+              <th>precio</th>
+              <th>cantidad</th>
+              <th>talle</th>
+              <th>quitar</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-productoCarrito>
+          <tr>
+              <td>{{productoCarrito.descripcion}}</td>
+              <td><img class="img-rounded" src="{{productoCarrito.foto}}" alt="Card image cap"></td>
+              <td>${{productoCarrito.precio}}</td>
+              <td>Cantidad: <input [(ngModel)]='productoCarrito.cant' type="number" min="1" max="50" required style="width: 50px;"></td>
+              <td>Talle:
+                <select name="" id="" style="cursor: pointer;">
+                  <option value="">S</option>
+                  <option value="">M</option>
+                  <option value="">L</option>
+                  <option value="">XL</option>
+                </select></td>
+                <td><button (click)="quitarProd(productoCarrito)">X</button></td>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="summary">
+          <div class="p-d-flex p-ai-center p-jc-between">
+              En total hay  {{productoCarrito ? productoCarrito.length : 0 }} productos.
+          </div>
+      </ng-template>
+  </p-table>
   
-
-<table style="width: 100%;">
-  <thead>
-    <tr>
-      <th>producto</th>
-      <th>imagen</th>
-      <th>talle</th>
-      <th>cantidad</th>
-      <th>precio</th>
-      <th>quitar</th>
-    </tr>
-  </thead>
-  <tbody *ngFor=" let a of productoCarrito; let i=index">
-    <tr>
-      <td> {{a.descripcion}}</td>
-      <td><img class="img-rounded" src="{{a.foto}}" alt="Card image cap"></td>
-      <td>Talle:
-        <select name="" id="" style="cursor: pointer;">
-          <option value="">S</option>
-          <option value="">M</option>
-          <option value="">L</option>
-          <option value="">XL</option>
-        </select></td>
-      <td>Cantidad: <input [(ngModel)]='a.cant' type="number" min="1" max="50" required style="width: 50px;"></td>
-      <td>Precio:  ${{a.precio}}</td>
-      <th><button (click)="quitarProd(i)" >X</button></th>
-    </tr>
-  </tbody>
-</table>
