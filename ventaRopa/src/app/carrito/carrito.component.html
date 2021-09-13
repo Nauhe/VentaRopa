@@ -28,18 +28,19 @@
       </ng-template>
       <ng-template pTemplate="header">
           <tr>
-              <th>nombre</th>
-              <th>imagen</th>
-              <th>precio</th>
-              <th>cantidad</th>
-              <th>talle</th>
-              <th>quitar</th>
+              <th> </th>
+              <th> </th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Talle</th>
+              <th>Quitar Producto</th>
           </tr>
       </ng-template>
       <ng-template pTemplate="body" let-productoCarrito let-rowIndex="rowIndex">
           <tr>
+              
+              <td><img class="img-rounded" src="{{productoCarrito.foto}}" alt="Card image cap"  width="200"></td>
               <td>{{productoCarrito.descripcion}}</td>
-              <td><img class="img-rounded" src="{{productoCarrito.foto}}" alt="Card image cap"></td>
               <td>${{productoCarrito.precio}}</td>
               <td>Cantidad: <input [(ngModel)]='productoCarrito.cant' type="number" min="1" max="50" required style="width: 50px;"></td>
               <td>Talle:
