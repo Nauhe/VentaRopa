@@ -30,9 +30,9 @@
           <tr>
               <th> </th>
               <th> </th>
-              <th>Precio</th>
               <th>Cantidad</th>
               <th>Talle</th>
+              <th>Precio</th>
               <th>Quitar Producto</th>
           </tr>
       </ng-template>
@@ -41,7 +41,6 @@
               
               <td><img class="img-rounded" src="{{productoCarrito.foto}}" alt="Card image cap"  width="200"></td>
               <td>{{productoCarrito.descripcion}}</td>
-              <td>${{productoCarrito.precio * productoCarrito.cant}}</td>
               <td>Cantidad: <input [(ngModel)]='productoCarrito.cant' type="number" min="1" max="50" required style="width: 50px;"></td>
               <td>Talle:
                 <select name="" id="" style="cursor: pointer;">
@@ -49,8 +48,10 @@
                   <option value="">M</option>
                   <option value="">L</option>
                   <option value="">XL</option>
-                </select></td>
-                <td><button (click)="quitarProd(rowIndex)">X</button></td>
+                </select>
+              </td>
+              <td>${{productoCarrito.precio * productoCarrito.cant}}</td>             
+              <td><button (click)="quitarProd(rowIndex)">X</button></td>
           </tr>
       </ng-template>
       <ng-template pTemplate="summary">
@@ -59,4 +60,9 @@
           </div>
       </ng-template>
   </p-table>
+
+  <div class="tablaTotal">
+    <div col-12>Subtotal: $ </div>
+    <div col-12>TOTAL: </div>
+  </div>
   
