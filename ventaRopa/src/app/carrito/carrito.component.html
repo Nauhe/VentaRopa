@@ -41,7 +41,7 @@
               
               <td><img class="img-rounded" src="{{productoCarrito.foto}}" alt="Card image cap"  width="200"></td>
               <td>{{productoCarrito.descripcion}}</td>
-              <td>${{productoCarrito.precio}}</td>
+              <td>${{productoCarrito.precio * productoCarrito.cant}}</td>
               <td>Cantidad: <input [(ngModel)]='productoCarrito.cant' type="number" min="1" max="50" required style="width: 50px;"></td>
               <td>Talle:
                 <select name="" id="" style="cursor: pointer;">

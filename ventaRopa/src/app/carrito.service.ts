@@ -11,15 +11,14 @@ export class CarritoService {
   constructor() { }
 
   agregarProd(producto:any){
-    let estaProd="noEstoy";
+    let estaProd:boolean=false;
     this.cantProductos.forEach(i=>{
       if(i.id == producto.id){
-        estaProd="estoy";
+        estaProd= !estaProd;
         i.cant+=producto.cant;
-        i.precio = producto.precio* i.cant;
       }
     });
-    if(estaProd== "noEstoy"){
+    if(!estaProd){
       this.cantProductos.push(producto);
       console.log(this.cantProductos);
     }
