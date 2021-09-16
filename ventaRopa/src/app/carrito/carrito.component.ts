@@ -12,26 +12,28 @@ import Swal from 'sweetalert2';
 export class CarritoComponent implements OnInit {
 
   productoCarrito: any[]=new Array();
-  contador:number=0;
-  precio:number=0;
+  total:number= 0;
   
-
-
   constructor(private carritoService: CarritoService, private servicioProducto: ProductosService) { }
 
   ngOnInit(): void {
     this.productoCarrito = this.carritoService.dameProd();
+    this.contarTotal();
   }
 
- 
-  contarProd(){
- this.carritoService.agregarProd;
-  }
-
-
+  contarTotal(){
+    console.log("total: ",);
+    this.total = 0;
+    this.productoCarrito.forEach(i=>{
+    this.total = this.total + (i.precio*i.cant);
+    })
+           
+    }
+  
   quitarProd(productoCarrito){
   console.log(productoCarrito);
   console.log(this.productoCarrito.splice(productoCarrito, 1))
+  this.contarTotal();
 }
 
    vaciarCarrito(){

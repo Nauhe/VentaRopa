@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 })
 export class CarritoService {
   private cantProductos: any[] = new Array();
+ 
   
   
   constructor() { }
@@ -22,10 +23,8 @@ export class CarritoService {
       this.cantProductos.push(producto);
       console.log(this.cantProductos);
     }
-
-    
-
   }
+ 
 
   dameProd(){
     return this.cantProductos;
