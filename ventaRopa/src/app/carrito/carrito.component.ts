@@ -13,6 +13,7 @@ export class CarritoComponent implements OnInit {
 
   productoCarrito: any[]=new Array();
   contador:number=0;
+  precio:number=0;
   
 
 

@@ -33,6 +33,7 @@
               <th>Cantidad</th>
               <th>Talle</th>
               <th>Precio</th>
+              <th>subtotal</th>
               <th>Quitar Producto</th>
           </tr>
       </ng-template>
@@ -50,7 +51,8 @@
                   <option value="">XL</option>
                 </select>
               </td>
-              <td>${{productoCarrito.precio * productoCarrito.cant}}</td>             
+              <td>${{productoCarrito.precio}}</td>
+              <td>${{productoCarrito.precio * productoCarrito.cant }}</td>             
               <td><button (click)="quitarProd(rowIndex)">X</button></td>
           </tr>
       </ng-template>
@@ -62,7 +64,6 @@
   </p-table>
 
   <div class="tablaTotal">
-    <div col-12>Subtotal: $ </div>
-    <div col-12>TOTAL: </div>
+    <div col-12>TOTAL: ${{precio}} </div>
   </div>
   
