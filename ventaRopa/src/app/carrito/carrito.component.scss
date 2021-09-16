@@ -43,3 +43,12 @@
     border-color: black;
     border-style: double;
 }
+table,
+    th, td {
+      border: 2px solid black;
+      border-collapse: unset;
+    }
+
+    th, td {
+      padding: 10px;
+    }

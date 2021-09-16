@@ -36,12 +36,18 @@ export class CarritoComponent implements OnInit {
   this.contarTotal();
 }
 
-   vaciarCarrito(){
+  vaciarCarrito() {
     this.carritoService.vaciarCarrito();
     this.productoCarrito = this.carritoService.dameProd();
 
   }
 
-  
+  contarSubtotal(productoCarrito) {
+    console.log(productoCarrito);
+    console.log(this.productoCarrito.splice(productoCarrito, 1))
+  }
+
+
+
 
 }
