@@ -24,7 +24,6 @@ export class CarritoService {
       console.log(this.cantProductos);
     }
   }
- 
 
   dameProd(){
     return this.cantProductos;

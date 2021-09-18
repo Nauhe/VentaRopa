@@ -37,8 +37,26 @@ export class CarritoComponent implements OnInit {
 }
 
   vaciarCarrito() {
+    Swal.fire({
+      title: 'Seguro queres vaciar carrito??',
+      text: "No vas a poder revertirlo",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Vaciado',
+          'Tu carrito fue vaciado',
+          'success'
+        )
+      }
+    })
     this.carritoService.vaciarCarrito();
     this.productoCarrito = this.carritoService.dameProd();
+  
 
   }
 

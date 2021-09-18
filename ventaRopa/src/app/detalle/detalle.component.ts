@@ -18,6 +18,7 @@ export class DetalleComponent implements OnInit {
     this.producto = this.servicioProducto.getProducto();
   }
 
+  
  
   ponerColor(p: any, color: string){
     p.foto = this.servicioProducto.cambiarColor(p.foto,color );
@@ -26,6 +27,14 @@ export class DetalleComponent implements OnInit {
 
   agregarCarrito(prod:any){
     this.carritoService.agregarProd(prod);
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se agrego el producto al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    
   }
 
 

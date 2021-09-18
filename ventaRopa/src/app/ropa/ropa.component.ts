@@ -34,6 +34,13 @@ export class RopaComponent implements OnInit {
   agregarCarrito(prod:any){
     prod.cant +=1;
     this.carritoService.agregarProd(prod);
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se agrego el producto al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
 
