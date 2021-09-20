@@ -19,12 +19,13 @@ export class ContenidoComponent implements OnInit {
     id: 1, 
     cant: 0,
     talle: "" , 
+    colores: ["gris", "negro"]
   }, 
   {
     descripcion: 'Buzo',
     precio: 8000,
     foto:'assets/buzoMujer_negro.jpg',
-    detalle: " BUZO CON CAPUCHA LISO, IDEAL PARA MEDIA ESTACIÓN.EN TELA FRISA",
+    detalle: "BUZO CON CAPUCHA LISO, IDEAL PARA MEDIA ESTACIÓN.EN TELA FRISA",
     id: 2,
     cant: 0,
     talle: "",
