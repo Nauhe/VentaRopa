@@ -80,17 +80,17 @@ export class ContenidoComponent implements OnInit {
     {
     descripcion: 'Remera',
     precio: 2100,
-    foto: 'assets/remNinio_negro.jpg',
+    foto: 'assets/remNinio_celes.jpg',
     detalle: "CAMISETA CUELLO REDONDO Y MANGA CORTA. ESTAMPADO DELANTERO.",
     id: 7, 
     cant: 0,
     talle: "" , 
-    colores: ["celes", "blanco"]
+    colores: ["celes", "blanc"]
   },
   {
     descripcion: 'Camperas',
     precio: 4000,
-    foto: 'assets/buzoNinio_celes.jpg',
+    foto: 'assets/buzoNinio_negro.jpg',
     detalle: "CAMPERA CON CAPUCHA Y MANGA LARGA ACABADO PUÑO. CIERRE CREMALLERA FRONTAL. ESTAMPADO EN PECHERA. ACABADOS EN RIB",
     id: 8, 
     cant: 0,
