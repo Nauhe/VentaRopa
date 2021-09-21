@@ -19,7 +19,7 @@ export class ContenidoComponent implements OnInit {
     id: 1, 
     cant: 0,
     talle: "" , 
-    colores: ["gris", "negro"]
+    colores: ["negro", "blanc"]
   }, 
   {
     descripcion: 'Buzo',
@@ -29,6 +29,7 @@ export class ContenidoComponent implements OnInit {
     id: 2,
     cant: 0,
     talle: "",
+    colores: ["negro", "griss"]
   },
   {
     descripcion: 'Pantalon',
@@ -38,7 +39,7 @@ export class ContenidoComponent implements OnInit {
     id: 3, 
     cant: 0,
     talle: "" , 
-
+    colores: ["negro", "griss"]
   },
   ]
 
@@ -51,6 +52,7 @@ export class ContenidoComponent implements OnInit {
     id: 4, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   },
   {
     descripcion: 'Campera',
@@ -60,6 +62,7 @@ export class ContenidoComponent implements OnInit {
     id: 5, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   },
   {
     descripcion: 'Pantalon',
@@ -69,6 +72,7 @@ export class ContenidoComponent implements OnInit {
     id: 6, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   },
   ]
 
@@ -77,10 +81,11 @@ export class ContenidoComponent implements OnInit {
     descripcion: 'Remera',
     precio: 2100,
     foto: 'assets/remNinio_negro.jpg',
-    detalle: "CAMISETA CUELLO REDONDO Y MANGA CORTA. ESTAMPADO TEXTO EN DELANTERO.",
+    detalle: "CAMISETA CUELLO REDONDO Y MANGA CORTA. ESTAMPADO DELANTERO.",
     id: 7, 
     cant: 0,
     talle: "" , 
+    colores: ["celes", "blanco"]
   },
   {
     descripcion: 'Camperas',
@@ -90,6 +95,7 @@ export class ContenidoComponent implements OnInit {
     id: 8, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   },
   {
     descripcion: 'Pantalon',
@@ -99,6 +105,7 @@ export class ContenidoComponent implements OnInit {
     id: 9, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   }
   ]
 
@@ -111,6 +118,7 @@ export class ContenidoComponent implements OnInit {
     id: 10, 
     cant: 0,
     talle: "" , 
+    colores: ["beige", "griss"]
   },
   {
     descripcion: 'Buzo',
@@ -120,6 +128,7 @@ export class ContenidoComponent implements OnInit {
     id: 11, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   },
   {
     descripcion: 'Pantalon',
@@ -129,6 +138,7 @@ export class ContenidoComponent implements OnInit {
     id: 12, 
     cant: 0,
     talle: "" , 
+    colores: ["negro", "griss"]
   }
   ]
 
