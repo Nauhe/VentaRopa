@@ -90,7 +90,7 @@ export class ContenidoComponent implements OnInit {
   {
     descripcion: 'Camperas',
     precio: 4000,
-    foto: 'assets/buzoNinio_negro.jpg',
+    foto: 'assets/buzoNinio_celes.jpg',
     detalle: "CAMPERA CON CAPUCHA Y MANGA LARGA ACABADO PUÑO. CIERRE CREMALLERA FRONTAL. ESTAMPADO EN PECHERA. ACABADOS EN RIB",
     id: 8, 
     cant: 0,
@@ -113,7 +113,7 @@ export class ContenidoComponent implements OnInit {
     {
     descripcion: 'Remera',
     precio: 2800,
-    foto: 'assets/remNinia_negro.jpg',
+    foto: 'assets/remNinia_beige.jpg',
     detalle: "CAMISETA CUELLO REDONDO Y MANGA LARGA. ESTAMPADO DISNEY. TEJIDO ESPECIAL SUAVE.",
     id: 10, 
     cant: 0,
