@@ -118,7 +118,7 @@ export class ContenidoComponent implements OnInit {
     id: 10, 
     cant: 0,
     talle: "" , 
-    colores: ["beige", "griss"]
+    colores: ["beige", "blanc"]
   },
   {
     descripcion: 'Buzo',
