@@ -14,11 +14,12 @@
                     <div class="colores">
                         Colores Disponibles:
                         <div *ngFor=" let color of p.colores" style="cursor: pointer;" class="Colores">
-                            <div *ngIf="color=='negro'" class=" cajaColores colorNegro" (click)="ponerColor( p, 'negro')"></div>
+                            <div class=" cajaColores {{color}}" (click)="ponerColor(p,color)"></div>
+                            <!-- <div *ngIf="color=='negro'" class=" cajaColores colorNegro" (click)="ponerColor( p, 'negro')"></div>
                             <div *ngIf="color=='blanc'" class=" cajaColores colorBlanco" (click)="ponerColor( p, 'blanc')"></div>
                             <div *ngIf="color=='griss'" class=" cajaColores colorGriss" (click)="ponerColor( p, 'griss')"></div>
                             <div *ngIf="color=='celes'" class=" cajaColores colorCeles" (click)="ponerColor( p, 'celes')"></div>
-                            <div *ngIf="color=='beige'" class=" cajaColores colorBeige" (click)="ponerColor( p, 'beige')"></div>
+                            <div *ngIf="color=='beige'" class=" cajaColores colorBeige" (click)="ponerColor( p, 'beige')"></div> -->
                 
                         </div>
                     </div>
