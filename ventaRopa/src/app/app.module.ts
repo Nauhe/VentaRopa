@@ -9,6 +9,8 @@ import { TableModule } from 'primeng/table';
 import { ContenidoComponent } from './contenido/contenido.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AltaProdComponent } from './alta-prod/alta-prod.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     RopaComponent,
     ContenidoComponent,
-    CarritoComponent
+    CarritoComponent,
+    AltaProdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    TableModule
+    TableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

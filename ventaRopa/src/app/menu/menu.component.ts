@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {HttpClient}from '@angular/common/http';
 
 @Component({
   selector: 'app-menu',
@@ -8,12 +9,19 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,
+    private httpClient:HttpClient) { }
 
   ngOnInit(): void {
   }
   navegar(donde:string){
     this.router.navigate([donde]);
+  }
+
+  pruebaBackend(){
+    this.httpClient.get("http://localhost:3000/user").subscribe(datos =>{
+      console.log(datos);
+    })
   }
 
 }
