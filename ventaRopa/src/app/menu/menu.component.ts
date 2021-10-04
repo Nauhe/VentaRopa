@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
   }
 
   pruebaBackend(){
-    this.httpClient.get("http://localhost:3000/user").subscribe(datos =>{
+    this.httpClient.get("http://localhost:3000/producto").subscribe(datos =>{
       console.log(datos);
     })
   }

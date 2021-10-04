@@ -1,7 +1,85 @@
 <h1>ALTA DE PRODUCTOS</h1>
-<div>
+
+<p-table [value]="productos">
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData>
+        <tr>
+            <td *ngFor="let col of cols">
+                    {{rowData[col.field]}}
+            </td>
+            <td>
+                <i class="pi pi-pencil" (click)="editarProductoDinamico(rowData)" style="cursor: pointer;"></i>
+                <i class="pi pi-trash"></i>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+
+<button (click)="getProductos()">Traer Productos</button>
+<button (click)="altaProducto()">Alta Producto</button>
+<button (click)="modificarProducto()">Modificar Producto</button>
+<button (click)="eliminarProducto()">Eliminar Producto</button>
+<div *ngFor="let prod of productos">
+    {{prod.descripcion}}
+</div>
+
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="row">
+            <div class="col-6">Descripcion:</div>
+            <div class="col-6"><input type="text" [(ngModel)]="producto.descripcion"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">Detalle:</div>
+            <div class="col-6"><input type="text" [(ngModel)]="producto.detalle"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">Precio:</div>
+            <div class="col-6"><input type="number" [(ngModel)]="producto.precio"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">Cantidad:</div>
+            <div class="col-6"><input type="number" [(ngModel)]="producto.cantidad"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">Talle:</div>
+            <div class="col-6"><input type="text" [(ngModel)]="producto.talle"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">Colores:</div>
+            <div class="col-6"><input type="text" [(ngModel)]="producto.colores"></div>
+        </div>
+        <div class="row">
+            <div class="col-6">Foto:</div>
+            <div class="col-6"><input type="text" [(ngModel)]="producto.foto"></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button style="width: 100%;" *ngIf="!editar" (click)="altaProdDinamico()">ALTA PRODUCTO</button>
+                <button style="width: 100%;" *ngIf="editar" (click)="editarProductoDinamico()">MODIFICAR PRODUCTO</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+<!-- <div>
     <h2>Agregar producto</h2>
 </div>
 <div>
     <h1>Modificar y Eliminar productos</h1>
-</div>
+</div> -->
+
+
