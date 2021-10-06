@@ -15,6 +15,7 @@ export class AltaProdComponent implements OnInit {
     {field: 'descripcion', header: 'Descripcion'},
     {field: 'detalle', header: 'Detalle'},
     {field: 'precio', header: 'Precio'},
+    {field: 'talle', header:'talle'},
     {field: 'cantidad', header: 'Cantidad'},
     {field: 'colores', header: 'Colores'}
   ]
@@ -34,39 +35,21 @@ export class AltaProdComponent implements OnInit {
   }
 
   altaProducto(){
-    let body = {
-      "descripcion": "Pantalon",
-      "detalle": "Tiro bajo",
-      "precio": 1500,
-      "cantidad": 3,
-      "talle": "XL",
-      "foto": "foto",
-      "colores": "negro,gris"
-  };
-    this.httpClient.post("http://localhost:3000/producto", body)
+    this.httpClient.post("http://localhost:3000/producto", this.producto)
     .subscribe(respuesta => {
       console.log("RESPUSTA DE ALTA: ", respuesta);
     });
-  }
+  };
 
   modificarProducto(){
-    let body = {
-      "descripcion": "Pantalon Corto",
-      "detalle": "Tiro bajo",
-      "precio": 2500,
-      "cantidad": 3,
-      "talle": "XL",
-      "foto": "foto",
-      "colores": "negro,gris"
-  };
-    this.httpClient.put("http://localhost:3000/producto/3", body)
+    this.httpClient.put("http://localhost:3000/producto/", this.producto)
     .subscribe( respuesta => {
       console.log(respuesta);
     });
-  }
+  };
 
   eliminarProducto(){
-    this.httpClient.delete("http://localhost:3000/producto/3")
+    this.httpClient.delete("http://localhost:3000/producto/")
     .subscribe( respuesta => {
       console.log(respuesta);
     });
