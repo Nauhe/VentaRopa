@@ -7,19 +7,19 @@ const URL_BASE: string = "http://localhost:3000"
 })
 export class HttpService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor( private httpClient: HttpClient) { }
 
 
   get(cont:string){
     return this.httpClient.get(URL_BASE + cont)
   };
 
-  post(cont:string,body){
+  post(){
     
 
   };
 
-  put(cont:string ,body){
+  put(cont:string , body){
     return this.httpClient.put(URL_BASE + cont, body);
 
   };

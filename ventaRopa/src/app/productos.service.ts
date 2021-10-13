@@ -8,7 +8,7 @@ const URL_PRODUCTO = "/producto"
 export class ProductosService {
   private productoSeleccionado;
 
-  constructor( private httpService: HttpService) { }
+  constructor(private httpService: HttpService ) { }
 
   traerProd(){
     return this.httpService.get(URL_PRODUCTO);
