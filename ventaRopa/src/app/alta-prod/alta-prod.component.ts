@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../clases/producto.model';
+import { ProductosService } from '../productos.service';
 
 @Component({
   selector: 'app-alta-prod',
@@ -20,14 +21,14 @@ export class AltaProdComponent implements OnInit {
     {field: 'colores', header: 'Colores'}
   ]
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private productoService: ProductosService) { }
 
   ngOnInit(): void {
     this.getProductos();
   }
 
   getProductos(){
-    this.httpClient.get('http://localhost:3000/producto')
+    this.productoService.traerProd()
     .subscribe(informacion => {
       console.log(informacion);
       this.productos = informacion;
@@ -42,14 +43,14 @@ export class AltaProdComponent implements OnInit {
   };
 
   modificarProducto(){
-    this.httpClient.put("http://localhost:3000/producto/", this.producto)
+    this.productoService.putProd(this.producto.id, this.producto)
     .subscribe( respuesta => {
       console.log(respuesta);
     });
   };
 
   eliminarProducto(){
-    this.httpClient.delete("http://localhost:3000/producto/")
+    this.httpClient.delete("http://localhost:3000/producto/"+this.producto.id)
     .subscribe( respuesta => {
       console.log(respuesta);
     });

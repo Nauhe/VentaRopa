@@ -1,4 +1,5 @@
 export class Producto {
+    id?:number;
     detalle: string;
     precio: number;
     cantidad: number;

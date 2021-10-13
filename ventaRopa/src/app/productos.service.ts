@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpService } from './http.service';
+const URL_PRODUCTO = "/producto"
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +8,17 @@ import { Injectable } from '@angular/core';
 export class ProductosService {
   private productoSeleccionado;
 
-  constructor() { }
+  constructor( private httpService: HttpService) { }
+
+  traerProd(){
+    return this.httpService.get(URL_PRODUCTO);
+  }
+
+  putProd(id ,prod){
+    return this.httpService.put(URL_PRODUCTO +"/"+ id , prod);
+  }
+
+
 
   cambiarColor(imagen: string, color: string): string {
     imagen = imagen.substr(0, imagen.length - 9);
