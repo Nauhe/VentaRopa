@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../clases/producto.model';
 import { ProductosService } from '../productos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-alta-prod',
@@ -35,13 +36,6 @@ export class AltaProdComponent implements OnInit {
     });
   }
 
-  altaProducto(){
-    this.httpClient.post("http://localhost:3000/producto", this.producto)
-    .subscribe(respuesta => {
-      console.log("RESPUSTA DE ALTA: ", respuesta);
-    });
-  };
-
   modificarProducto(){
     this.productoService.putProd(this.producto.id, this.producto)
     .subscribe( respuesta => {
@@ -49,17 +43,38 @@ export class AltaProdComponent implements OnInit {
     });
   };
 
-  eliminarProducto(){
-    this.httpClient.delete("http://localhost:3000/producto/"+this.producto.id)
-    .subscribe( respuesta => {
-      console.log(respuesta);
-    });
+  eliminarProducto(producto){
+    let mensaje = "Eliminar producto" + producto.descripcion + "?";
+    Swal.fire({
+      title: 'Estas seguro?',
+      text: mensaje,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.httpClient.delete("http://localhost:3000/producto/"+producto.id)
+        .subscribe( respuesta => {
+          let r:any = respuesta; 
+          if (r.affected == 1){
+            Swal.fire(
+              'Eliminar',
+              'Producto eliminado',
+              'success'
+            )
+          }
+        });
+      }
+    })
   }
 
   altaProdDinamico(){
     this.httpClient.post('http://localhost:3000/producto', this.producto)
     .subscribe( respuesta => {
-      console.log(respuesta);
+      this.productos.push(respuesta);
+      this.limpiarProducto();
     });
   }
 
@@ -67,5 +82,14 @@ export class AltaProdComponent implements OnInit {
     console.log("INFORMACION : ", rowData);
     this.producto = rowData;
     this.editar = true;
+  }
+
+  private limpiarProducto(){
+    this.producto = new Producto();
+  }
+
+  cancelarModificacion(){
+    this.limpiarProducto();
+    this.editar = false;
   }
 }

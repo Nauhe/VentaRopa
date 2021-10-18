@@ -18,7 +18,7 @@
             </td>
             <td>
                 <i class="pi pi-pencil" (click)="editarProductoDinamico(rowData)" style="cursor: pointer;"></i>
-                <i class="pi pi-trash" (click)="eliminarProducto()" style="cursor: pointer;"></i>
+                <i class="pi pi-trash" (click)="eliminarProducto(rowData)" style="cursor: pointer;"></i>
             </td>
         </tr>
     </ng-template>
@@ -27,9 +27,8 @@
 
 
 <button (click)="getProductos()">Traer Productos</button>
-<button (click)="altaProducto()">Alta Producto</button>
 <button (click)="modificarProducto()">Modificar Producto</button>
-<button (click)="eliminarProducto()">Eliminar Producto</button>
+<button (click)="eliminarProducto(null)">Eliminar Producto</button>
 
 
 <div class="row">
@@ -67,6 +66,7 @@
             <div class="col-12">
                 <button style="width: 100%;" *ngIf="!editar" (click)="altaProdDinamico()">ALTA PRODUCTO</button>
                 <button style="width: 100%;" *ngIf="editar" (click)="modificarProducto()">MODIFICAR PRODUCTO</button>
+                <button style="width: 100%;" *ngIf="editar" (click)="cancelarModificacion()">CANCELAR</button>
             </div>
         </div>
     </div>
